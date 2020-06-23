@@ -1,0 +1,1466 @@
+{
+    "general": {
+        "tagline": "Enhancing Trust",
+        "checkupdate": "Memeriksa versi aplikasi",
+        "update": "Memperbarui data aplikasi",
+        "outdated": {
+            "title": "Maaf",
+            "description": "Saat ini Anda tidak dapat menggunakan aplikasi ini, silahkan untuk memperbarui aplikasi terlebih dahulu"
+        },
+        "menu" : {
+            "home": "Beranda",
+            "polis": "Polis",
+            "product": "Produk",
+            "claim": "Klaim",
+            "profile": "Akun"
+        },
+        "filter": {
+            "title": "Filter",
+            "actions": {
+                "apply": "Terapkan"
+            }
+        }
+    },
+    "emergency": {
+        "title": "Layanan Darurat",
+        "actions": {
+            "ambulance":"Ambulance - 118" ,
+            "police": "Bantuan Polisi - 110",
+            "medic": "Bantuan Medis - 119",
+            "tow": "Bantuan Mobil Derek",
+            "cs": "Customer Service GantiRugi"
+        }
+    },
+    "foto": {
+        "title": "Foto",
+        "action": {
+            "upload": "SImpan Foto",
+            "retry": "Coba Lagi",
+            "skip": "Lewati",
+            "retake": "Ambil Ulang"
+        },
+        "error" : "Tidak Dapat Menyimpan Foto",
+        "label": {
+            "step": [
+                "Lampiran ke",
+                "dari"
+            ],
+            "required": "Wajib Diisi"
+        }
+    },
+    "uac": {
+        "login": {
+            "title": null,
+            "subtitle": null,
+            "input": {
+                "username": {
+                    "label": "Email",
+                    "placeholder": "Masukkan email Anda"
+                },
+                "password": {
+                    "label": "Kata Sandi",
+                    "placeholder": "Masukkan kata sandi Anda"
+                }
+            },
+            "actions" : {
+                "login": "Login"
+            },
+            "forgetpassword" : "Lupa Password ?",
+            "register": {
+                "title": "Belum punya akun?",
+                "action": "Mendaftar"
+            },
+            "alert": {
+                "loginsuccess": "Selamat datang kembali",
+                "loginfail" : "Username atau password Anda salah"
+            }
+        },
+        "register": {
+            "title": "Mendaftar",
+            "subtitle": "Silahkan melengkapi data Anda untuk mendaftar",
+            "input": {
+                "name": {
+                    "label": "Nama Lengkap",
+                    "placeholder": "Nama lengkap sesuai KTP"
+                },                
+                "username": {
+                    "label": "Email",
+                    "placeholder": "Masukkan email Anda"
+                },
+                "password": {
+                    "label": "Kata Sandi",
+                    "placeholder": "Masukkan kata sandi Anda"
+                },
+                "referral": {
+                    "label": "Kode Referral (Tidak Wajib Diisi)",
+                    "placeholder": "Masukkan kode referral bila ada"
+                }                
+            },
+            "actions" : {
+                "register": "Mendaftar"
+            },
+            "login": {
+                "title": "Sudah punya akun?",
+                "action": "Login"
+            },
+            "alert": {
+                "registersuccess": "Registrasi berhasil. Silahkan konfirmasi email Anda"
+            }
+        },
+        "forgetpassword": {
+            "title": "Lupa Password",
+            "subtitle": "Masukkan email Anda, sistem akan mengirimkan kode untuk memperbarui password Anda",
+            "input": {            
+                "username": {
+                    "label": "Email",
+                    "placeholder": "Masukkan email Anda"
+                }
+            },
+            "actions" : {
+                "reset": "Kirimkan Kode",
+                "cancel": "Kembali"
+            },
+            "alert": {
+                "requestsuccess": "Kode telah dikirimkan ke email Anda",
+                "requestfail" : "Username tidak ditemukan"
+            }            
+        }
+    },
+    "polis": {
+        "index": {
+            "input": {
+                "search": {
+                    "placeholder": "Cari Berkas Polis"
+                }
+            },
+            "actions": {
+                "retry": "Coba Lagi"
+            }
+        }
+    },
+    "product": {
+        "title": "Asuransi",
+        "info": {
+            "title": "Informasi Produk"
+        },
+        "content": {
+            "title": "Pengajuan Baru",
+            "subtitle": "Asuransi apa yang Anda butuhkan?",
+            "menu": {
+                "info": "Informasi Produk",
+                "application": {
+                    "title": "Permohonan GantiRugi",
+                    "actions": { 
+                        "index" : "Tampilkan Semua Permohonan",
+                        "deleted" : "Tampilkan Permohonan Dihapus"
+                    }
+                },
+                "quotation": {
+                    "title": "Riwayat Perhitungan Premi",
+                    "action": "Tampilkan Semua Riwayat"
+                }
+            }
+        },
+        "quotation": {
+            "index": {
+                "title": "Riwayat Perhitungan Premi",
+                "input": {
+                    "search": {
+                        "placeholder": "Cari Riwayat Perhitungan Premi"
+                    }
+                },
+                "actions": {
+                    "retry": "Coba Lagi"
+                }
+            },
+            "create": {
+                "pa": {
+                    "title": "Pengajuan ",
+                    "input": {
+                        "title": "Data Tertanggung",
+                        "object.dob":{
+                            "label": "Tanggal Lahir Tertanggung",
+                            "placeholder": "Masukkan Tanggal Lahir Tertanggung"
+                        },
+                        "coverage.level": {
+                            "label": "Proteksi",
+                            "placeholder": "Silahkan Pilih Proteksi Tertanggung",
+                            "secondaryplaceholder": "Masukkan Tanggal Lahir Terlebih Dahulu"
+                        },
+                        "owner_code": {
+                            "label": "Pengelola Administrasi",
+                            "placeholder": "Silahkan Pilih Pengelola"
+                        }                   
+                    },
+                    "actions": {
+                        "submit": "Hitung Premi GantiRugi"
+                    }
+                },
+                "mobil": {
+                    "title": "Pengajuan ",
+                    "input": {
+                        "specs": {
+                            "title": "Spesifikasi Mobil",
+                            "object.brand": {
+                                "label": "Merk Mobil",
+                                "placeholder": "Silahkan Pilih Merk"
+                            },
+                            "object.year": {
+                                "label": "Tahun Mobil",
+                                "placeholder": "Silahkan Pilih Tahun Mobil",
+                                "secondaryplaceholder": "Pilih Merk Terlebih Dahulu"
+                            },
+                            "object.type": {
+                                "label": "Tipe Mobil",
+                                "placeholder": "Silahkan Pilih Tipe Mobil",
+                                "secondaryplaceholder": "Pilih Tahun Mobil Terlebih Dahulu"
+                            },
+                            "object.model": {
+                                "label": "Model",
+                                "placeholder": "Silahkan Pilih Model",
+                                "secondaryplaceholder": "Pilih Tipe Mobil Terlebih Dahulu"
+                            },
+                            "object.usage": {
+                                "label": "Pemakaian",
+                                "placeholder": "Silahkan Pilih"
+                            },
+                            "object.license_plate": {
+                                "label": "Kode Plat (TNKB)",
+                                "placeholder": "Silahkan Pilih"
+                            },
+                            "object.license_plate_color": {
+                                "label": "Warna Dasar Plat (TNKB)",
+                                "placeholder": "Silahkan Pilih"
+                            }
+                        },
+                        "misc": {
+                            "title": "Lain Lain",
+                            "check": {
+                                "label" : "Ya, Saya Perlu",
+                                "text": "Perlindungan untuk Perlengkapan Tambahan (Non Standar)"
+                            },
+                            "accessories": {
+                                "interior": {
+                                    "title": "Interior",
+                                    "input":{
+                                        "name": {
+                                            "label": "Nama Item",
+                                            "placeholder": "Belum Ada Item Interior",
+                                            "action": "Tambah Item",
+                                            "actiondetail": "Masukkan Nama Item Interior"
+                                        },
+                                        "price": {
+                                            "label": "Total Harga (IDR)",
+                                            "placeholder": "Masukkan Jumlah Nominal Total "
+                                        }
+                                    }
+                                },
+                                "exterior": {
+                                    "title": "Exterior",
+                                    "input":{
+                                        "name": {
+                                            "label": "Nama Item",
+                                            "placeholder": "Belum Ada Item Exterior",
+                                            "action": "Tambah Item",
+                                            "actiondetail": "Masukkan Nama Item Exterior"
+                                        },
+                                        "price": {
+                                            "label": "Total Harga (IDR)",
+                                            "placeholder": "Masukkan Jumlah Nominal Total "
+                                        }
+                                    }
+                                }                                
+                            }
+                        },
+                        "protection": {
+                            "title":"Jenis Perlindungan",
+                            "owner_code": {
+                                "label": "Pengelola Administrasi",
+                                "placeholder": "Silahkan Pilih Pengelola"
+                            },
+                            "coverage.level": {
+                                "label": "Coverage Level",
+                                "placeholder": "Silahkan Pilih"
+                            }
+                        }
+                    },
+                    "actions": {
+                        "submit": "Hitung Premi GantiRugi"
+                    }
+                },
+                "niaga": {
+                    "title": "Pengajuan ",
+                    "input": {
+                        "specs": {
+                            "title": "Spesifikasi Kendaraan Niaga",
+                            "object.brand": {
+                                "label": "Merk Kendaraan Niaga",
+                                "placeholder": "Silahkan Pilih Merk"
+                            },
+                            "object.year": {
+                                "label": "Tahun Kendaraan Niaga",
+                                "placeholder": "Silahkan Pilih Tahun Kendaraan Niaga",
+                                "secondaryplaceholder": "Pilih Merk Terlebih Dahulu"
+                            },
+                            "object.type": {
+                                "label": "Tipe Kendaraan Niaga",
+                                "placeholder": "Silahkan Pilih Tipe Kendaraan Niaga",
+                                "secondaryplaceholder": "Pilih Tahun Kendaraan Niaga Terlebih Dahulu"
+                            },
+                            "object.model": {
+                                "label": "Model",
+                                "placeholder": "Silahkan Pilih Model",
+                                "secondaryplaceholder": "Pilih Tipe Kendaraan Niaga Terlebih Dahulu"
+                            },
+                            "object.usage": {
+                                "label": "Pemakaian",
+                                "placeholder": "Silahkan Pilih"
+                            },
+                            "object.license_plate": {
+                                "label": "Kode Plat (TNKB)",
+                                "placeholder": "Silahkan Pilih"
+                            },
+                            "object.license_plate_color": {
+                                "label": "Warna Dasar Plat (TNKB)",
+                                "placeholder": "Silahkan Pilih"
+                            }
+                        },
+                        "misc": {
+                            "title": "Lain Lain",
+                            "check": {
+                                "label" : "Ya, Saya Perlu",
+                                "text": "Perlindungan untuk Perlengkapan Tambahan (Non Standar)"
+                            },
+                            "accessories": {
+                                "interior": {
+                                    "title": "Interior",
+                                    "input":{
+                                        "name": {
+                                            "label": "Nama Item",
+                                            "placeholder": "Belum Ada Item Interior",
+                                            "action": "Tambah Item",
+                                            "actiondetail": "Masukkan Nama Item Interior"
+                                        },
+                                        "price": {
+                                            "label": "Total Harga (IDR)",
+                                            "placeholder": "Masukkan Jumlah Nominal Total "
+                                        }
+                                    }
+                                },
+                                "exterior": {
+                                    "title": "Exterior",
+                                    "input":{
+                                        "name": {
+                                            "label": "Nama Item",
+                                            "placeholder": "Belum Ada Item Exterior",
+                                            "action": "Tambah Item",
+                                            "actiondetail": "Masukkan Nama Item Exterior"
+                                        },
+                                        "price": {
+                                            "label": "Total Harga (IDR)",
+                                            "placeholder": "Masukkan Jumlah Nominal Total "
+                                        }
+                                    }
+                                }                                
+                            }
+                        },
+                        "protection": {
+                            "title":"Perlindungan GantiRugi",
+                            "owner_code": {
+                                "label": "Pengelola Administrasi",
+                                "placeholder": "Silahkan Pilih Pengelola"
+                            },
+                            "coverage.level": {
+                                "label": "Proteksi",
+                                "placeholder": "Silahkan Pilih Proteksi yang Sesuai"
+                            }
+                        }
+                    },
+                    "actions": {
+                        "submit": "Hitung Premi GantiRugi"
+                    }
+                },
+                "motor": {
+                    "title": "Pengajuan ",
+                    "input": {
+                        "specs": {
+                            "title": "Spesifikasi Motor",
+                            "object.brand": {
+                                "label": "Merk Motor",
+                                "placeholder": "Silahkan Pilih Merk"
+                            },
+                            "object.year": {
+                                "label": "Tahun Motor",
+                                "placeholder": "Silahkan Pilih Tahun Motor",
+                                "secondaryplaceholder": "Pilih Merk Terlebih Dahulu"
+                            },
+                            "object.type": {
+                                "label": "Tipe Motor",
+                                "placeholder": "Silahkan Pilih Tipe Motor",
+                                "secondaryplaceholder": "Pilih Tahun Motor Terlebih Dahulu"
+                            },
+                            "object.model": {
+                                "label": "Model",
+                                "placeholder": "Silahkan Pilih Model",
+                                "secondaryplaceholder": "Pilih Tipe Motor Terlebih Dahulu"
+                            },
+                            "object.usage": {
+                                "label": "Pemakaian",
+                                "placeholder": "Silahkan Pilih"
+                            },
+                            "object.license_plate": {
+                                "label": "Kode Plat (TNKB)",
+                                "placeholder": "Silahkan Pilih"
+                            },
+                            "object.license_plate_color": {
+                                "label": "Warna Dasar Plat (TNKB)",
+                                "placeholder": "Silahkan Pilih"
+                            }
+                        },
+                        "misc": {
+                            "title": "Lain Lain",
+                            "check": {
+                                "label" : "Ya, Saya Perlu",
+                                "text": "Perlindungan untuk Perlengkapan Tambahan (Non Standar)"
+                            },
+                            "accessories": {
+                                "interior": {
+                                    "title": "Interior",
+                                    "input":{
+                                        "name": {
+                                            "label": "Nama Item",
+                                            "placeholder": "Belum Ada Item Interior",
+                                            "action": "Tambah Item",
+                                            "actiondetail": "Masukkan Nama Item Interior"
+                                        },
+                                        "price": {
+                                            "label": "Total Harga (IDR)",
+                                            "placeholder": "Masukkan Jumlah Nominal Total "
+                                        }
+                                    }
+                                },
+                                "exterior": {
+                                    "title": "Exterior",
+                                    "input":{
+                                        "name": {
+                                            "label": "Nama Item",
+                                            "placeholder": "Belum Ada Item Exterior",
+                                            "action": "Tambah Item",
+                                            "actiondetail": "Masukkan Nama Item Exterior"
+                                        },
+                                        "price": {
+                                            "label": "Total Harga (IDR)",
+                                            "placeholder": "Masukkan Jumlah Nominal Total "
+                                        }
+                                    }
+                                }                                
+                            }
+                        },
+                        "protection": {
+                            "title":"Perlindungan GantiRugi",
+                            "owner_code": {
+                                "label": "Pengelola Administrasi",
+                                "placeholder": "Silahkan Pilih Pengelola"
+                            },
+                            "coverage.level": {
+                                "label": "Proteksi",
+                                "placeholder": "Silahkan Pilih Proteksi yang Sesuai"
+                            }
+                        }
+                    },
+                    "actions": {
+                        "submit": "Hitung Premi GantiRugi"
+                    }
+                }             
+            },
+            "detail": {
+                "title": "Detail Perhitungan Premi",
+                "header": {
+                    "title": "Detail Objek",
+                    "nonpa": [
+                        "TNKB Plat"
+                    ],
+                    "pa": [
+                        "Tertanggung",
+                        "Tanggal Lahir"
+                    ]
+                },
+                "quotation": {
+                    "title": "Ringkasan Perlindungan GantiRugi",
+                    "price": {
+                        "label": "Harga Perlindungan GantiRugi"
+                    },
+                    "accessories": {
+                        "label": "Perlengkapan Tambahan/Non Standar"
+                    },
+                    "total": {
+                        "label": "Total Harga Perlindungan GantiRugi"
+                    }
+                },
+                "coverage": {
+                    "title": "Premi Perluasan Tambahan Pertahun",
+                    "extended_perils": {
+                        "title": "Perluasan Resiko",
+                        "actions": "Saya perlu menambahkan perluasan resiko"
+                    },
+                    "extended_covers": {
+                        "title": "Perluasan Jaminan",
+                        "actions": "Saya perlu menambahkan perluasan jaminan"
+                    }                },
+                "premium": {
+                    "title": "Premi Bulanan",
+                    "cashback": "CashBack Premi",
+                    "total": "Total Premi",
+                    "grandTotal": "Total Premi 12 Bulan"
+                },
+                "actions": {
+                    "retry": "Coba Lagi",
+                    "apply": "Beli"
+                },
+                "empty": "Data belum lengkap",
+                "error" : "Tidak Dapat Menampilkan Data"
+            }
+        },
+        "application": {
+            "index": {
+                "title": "Permohonan GantiRugi",
+                "input": {
+                    "search": {
+                        "placeholder": "Cari Berkas Permohonan"
+                    }
+                },
+                "actions": {
+                    "retry": "Coba Lagi"
+                }
+            },
+            "deleted": {
+                "title": "Permohonan Dihapus",
+                "input": {
+                    "search": {
+                        "placeholder": "Cari Berkas Permohonan"
+                    }
+                },
+                "actions": {
+                    "retry": "Coba Lagi"
+                }            
+            },
+            "detail": {
+                "error": {
+                    "invalidate": "Tanggal aktif tidak valid",
+                    "empty": "Data belum diisi"
+                },
+                "alert" : {
+                    "expired": "Permohonan ini telah berakhir, silahkan klik tombol perbarui untuk memperbarui permohonan ini",
+                    "soon": "Penawaran ini todak mengikat. Untuk menikmati Premi terbaik ini segera ajukan permohonan anda sebelum "
+                },
+                "title": "Detail Permohonan",
+                "menu": {
+                    "bill": {
+                        "title": "Premi"
+                    },
+                    "premium": {
+                        "title": "Perlindungan",
+                        "display": {
+                            "active": "Tanggal Aktif",
+                            "cashback": "Cashback"
+                        },
+                        "actions": {
+                            "penawaran": {
+                                "download": "Download Penawaran",
+                                "share": "Share Penawaran"
+                            },
+                            "undewriting": {
+                                "download": "Download Permohonan"
+                            }
+                        }
+                    },
+                    "photos": {
+                        "title": "Lampiran Dokumen Foto",
+                        "display": {
+                            "empty": "Data belum lengkap"
+                        },
+                        "actions": {
+                            "title": "Lampiran Foto"
+                        }
+                    },
+                    "actions": {
+                        "applying": {
+                            "title": "Ajukan",
+                            "subtitle": "Saya telah membaca Syarat dan Ketentuan dan saya bersedia untuk membeli perlindungan GantiRugi dengan nilai perlindungan, nilai premi dan syarat dan ketentuan GantiRugi",
+                            "applying": "Ajukan Permohonan",
+                            "cancel": "Batalkan Permohonan"
+                        },
+                        "waiting_for_payment": {
+                            "buy": {
+                                "title": "Pembayaran",
+                                "subtitle": {
+                                    "1": "Pemotongan dana dari Rekening Anda akan dilakukan secara otomatis oleh sistem pada",
+                                    "2": "Apabila Anda ingin perlidungan GantiRugi segera aktif, Anda dapat melakukan pembayaran dengan klik tombol bayar dan sistem tidak akan mendebit saldo Anda lagi."
+                                },
+                                "buy": "Bayar sekarang"
+                            },
+                            "cancel": {
+                                "title": "Berubah Pikiran?",
+                                "subtitle": "Tidak jadi membeli perlindungan ini? Batalkan saja permohonan ini, dan pembelian Anda akan dibatalkan. Tidak ada uang yang terpotong dari Rekening Anda",
+                                "cancel": "Batalkan Permohonan"
+                            }
+                        },
+                        "waiting_for_approval": {
+                            "title": "",
+                            "subtitle": "Untuk bantuan mengenani pengajuan perlindungan GantiRugi Anda, silahkan menghubungi layanan bantuan kami",
+                            "help": "Bantuan"
+                        },
+                        "declined": {
+                            "declined": "Ajukan Ulang"
+                        },
+                        "cancelled": {
+                            "cancelled": "Ajukan Ulang"
+                        },
+                        "lapsed": {
+                            "lapsed": "Ajukan Ulang"
+                        }
+                    }
+                },
+                "member": {
+                    "title": "Formulir Permohonan",
+                    "display": {
+                        "member": "Data Anggota",
+                        "ahli_waris": "Ahli Waris",
+                        "relation": "Relasi"
+                    },
+                    "actions": {
+                        "update": "Review",
+                        "addPhotos": "Tambahkan Foto"
+                    }
+                },
+                "coverage": {
+                    "title": "Perlindungan",
+                    "display": {
+                        "total_premium": "Harga Perlindungan"
+                    },
+                    "modalinput": {
+                        "title": "Perlindungan",
+                        "input": {
+                            "at": {
+                                "label": "Perlindungan Aktif Pada",
+                                "placeholder": "Pilih Tanggal"
+                            },
+                            "cashback": {
+                                "label": "Persentase Cashback",
+                                "placeholder": "Isikan Cashback",
+                                "disabled": "*Untuk Saat ini Anda Tidak Dapat Mengatur Cashback"
+                            },
+                            "autorenew": {
+                                "label": "Perpanjangan Otomatis (Maksimal Setahun)",
+                                "placeholder": "Pilih"
+                            }
+                        },
+                        "action": {
+                            "submit": "Simpan" 
+                        }
+                    }
+                },
+                "quotation": {
+                    "title": "Ringkasan Perlindungan GantiRugi",
+                    "price": {
+                        "label": "Harga Perlindungan GantiRugi"
+                    },
+                    "accessories": {
+                        "label": "Perlengkapan Tambahan/Non Standar"
+                    },
+                    "total": {
+                        "label": "Total Harga Perlindungan GantiRugi"
+                    }
+                },
+                "object": {
+                    "title": "Detail Objek",
+                    "nonpa": [
+                        "TNKB Plat"
+                    ],
+                    "pa": [
+                        "Tertanggung",
+                        "Tanggal Lahir"
+                    ],
+                    "actions": {
+                        "update": "Review"
+                    },
+                    "display": {
+                        "engine": "Nomor Mesin",
+                        "body": "Nomor Rangka"
+                    }
+                },
+                "premium": {
+                    "title": "Premi Bulanan",
+                    "cashback": "CashBack Premi",
+                    "total": "Total Premi",
+                    "grandTotal": "Total Premi 12 Bulan"
+                },
+                "product": {
+                    "title": "Detail Pemasar",
+                    "marketer": {
+                        "label": "Pemasar",
+                        "placeholder": "Silahkan Pilih Produk Asuransi Terlebih Dahulu"
+                    },
+                    "insurer": {
+                        "label": "Penanggung",
+                        "placeholder": "Silahkan Pilih Produk Asuransi Terlebih Dahulu"
+                    },
+                    "action": "Pilih Pemasar",
+                    "modalinput": {
+                        "title": "Pilih Pemasar",
+                        "insurer": "Penanggung",
+                        "marketer": "Pemasar"
+                    }
+                },
+                "actions": {
+                    "retry": "Coba Lagi",
+                    "downloadquotation": "Download Penawaran",
+                    "downlaodppa" : "Download SPPA"
+                },
+                "message": {
+                    "applysuccess": "Aplikasi berhasil diajukan"
+                },
+                "forms": {
+                    "member": {
+                        "title": "Kepemilikan Berkas",
+                        "subtitle": "Pemilik berkas adalah orang yang nantinya dapat melakukan klaim",
+                        "actions": {
+                            "submit": "Simpan"
+                        },
+                        "input": {
+                            "owner": {
+                                "label": "Perlindungan Untuk",
+                                "placeholder": "Pilih"
+                            },
+                            "name": {
+                                "label": "Nama Lengkap",
+                                "placeholder": "Nama sesuai KTP"
+                            },
+                            "username": {
+                                "label": "Email",
+                                "placeholder": "Email"
+                            },
+                            "phone": {
+                                "label": "No. Telepon",
+                                "placeholder": "Nomor yang dapat dihubungi"
+                            },
+                            "province": {
+                                "label": "Provinsi",
+                                "placeholder": "Nama Provinsi"
+                            },
+                            "city": {
+                                "label": "Kota",
+                                "placeholder": "Nama Kota"
+                            },
+                            "street": {
+                                "label": "Jalan",
+                                "placeholder": "Alamat Lengkap"
+                            },
+                            "menu": {
+                                "profile": {
+                                    "title": "Data Profil"
+                                },
+                                "address": {
+                                    "title": "Alamat Tinggal"
+                                }
+                            },
+                            "actions": {
+                                "next": "Berikutnya"
+                            }
+                        }
+                    },
+                    "object": {
+                        "title": "Detail Objek Pertanggungan",
+                        "subtitle": "Ini merupakan detail dari object tertanggung",
+                        "actions": {
+                            "submit": "Simpan"
+                        },
+                        "input": {
+                            "display": {
+                                "object": "Detail Kendaraan",
+                                "usage": "Penggunaan"
+                            },
+                            "color": {
+                                "label": "Warna Kendaraan",
+                                "placeholder": "Pilih"
+                            },
+                            "license_plate": {
+                                "label": "No. Polisi",
+                                "placeholder": "XXXX-XXX"
+                            },
+                            "machine_id": {
+                                "label": "No. Mesin",
+                                "placeholder": "No. Mesin"
+                            },
+                            "body_id": {
+                                "label": "No. Rangka",
+                                "placeholder": "No. Rangka"
+                            }
+                        }
+                    }
+                }
+            },
+            "form_owner": {
+                "title": "Kepemilikan Berkas",
+                "subtitle": "Pemilik berkas adalah orang yang nantinya dapat melakukan klaim",
+                "input": {
+                    "owner": {
+                        "label": "Perlindungan Untuk",
+                        "placeholder": "Pilih"
+                    },
+                    "name": {
+                        "label": "Nama Lengkap",
+                        "placeholder": "Nama sesuai KTP"
+                    },
+                    "username": {
+                        "label": "Email",
+                        "placeholder": "Email"
+                    },
+                    "phone": {
+                        "label": "No. Telepon",
+                        "placeholder": "Nomor yang dapat dihubungi"
+                    },
+                    "province": {
+                        "label": "Provinsi",
+                        "placeholder": "Pilih"
+                    },
+                    "city": {
+                        "label": "Kota",
+                        "placeholder": "Pilih"
+                    },
+                    "street": {
+                        "label": "Jalan",
+                        "placeholder": "Alamat Lengkap"
+                    }
+                },
+                "menu": {
+                    "profile": {
+                        "title": "Data Profil"
+                    },
+                    "address": {
+                        "title": "Alamat Tinggal"
+                    }
+                },
+                "actions": {
+                    "next": "Berikutnya",
+                    "save": "Simpan"
+                }
+            },
+            "form_coverage": {
+                "title": "Form Perlindungan",
+                "menu": {
+                    "coverage": {
+                        "title": "Perlindungan",
+                        "subtitle": "Pengaturan perlindungan"
+                    },
+                    "cashback": {
+                        "title": "Cashback",
+                        "subtitle": "Pengaturan cashback"
+                    }
+                },
+                "input": {
+                    "insurer": {
+                        "label": "Penanggung",
+                        "placeholder": "Pilih"
+                    },
+                    "active_at": {
+                        "label": "Saya menginginkan perlindungan dimulai pada",
+                        "placeholder": "DD/MM/YYYY"
+                    },
+                    "is_auto_renew": {
+                        "label": "Perpanjangan otomatis tiap bulan (max 1 tahun)",
+                        "placeholder": ""
+                    },
+                    "persentase_cashback": {
+                        "label": "Persentase cashback (0% hingga 25%)",
+                        "placeholder": ""
+                    }
+                }
+            },
+            "form_photos": {
+                "title": "Lampiran Foto",
+                "menu": {
+                    "coverage": {
+                        "title": "Perlindungan",
+                        "subtitle": "Pengaturan perlindungan"
+                    },
+                    "cashback": {
+                        "title": "Cashback",
+                        "subtitle": "Pengaturan cashback"
+                    }
+                },
+                "input": {
+                    "insurer": {
+                        "label": "Penanggung",
+                        "placeholder": "Pilih"
+                    },
+                    "active_at": {
+                        "label": "Saya menginginkan perlindungan dimulai pada",
+                        "placeholder": "DD/MM/YYYY"
+                    },
+                    "is_auto_renew": {
+                        "label": "Perpanjangan otomatis tiap bulan (max 1 tahun)",
+                        "placeholder": ""
+                    },
+                    "persentase_cashback": {
+                        "label": "Persentase cashback (0% hingga 25%)",
+                        "placeholder": ""
+                    }
+                }
+            },
+            "edit": {
+                "title": "Permohonan",
+                "input": {
+                    "form_kepemilikan": {
+                        "title": "Kepemilikan Berkas",
+                        "subtitle": "Pemilik berkas adalah orang yang nantinya dapat melakukan klaim",
+                        "owner": {
+                            "label": "Perlindungan Untuk",
+                            "placeholder": "Pilih"
+                        },
+                        "name": {
+                            "label": "Nama Lengkap",
+                            "placeholder": "Nama sesuai KTP"
+                        },
+                        "username": {
+                            "label": "Email",
+                            "placeholder": "Email"
+                        },
+                        "phone": {
+                            "label": "No. Telepon",
+                            "placeholder": "Nomor yang dapat dihubungi"
+                        },
+                        "province": {
+                            "label": "Provinsi",
+                            "placeholder": "Pilih"
+                        },
+                        "city": {
+                            "label": "Kota",
+                            "placeholder": "Pilih"
+                        },
+                        "street": {
+                            "label": "Jalan",
+                            "placeholder": "Alamat Lengkap"
+                        },
+                        "menu": {
+                            "profile": {
+                                "title": "Data Profil"
+                            },
+                            "address": {
+                                "title": "Alamat Tinggal"
+                            }
+                        },
+                        "actions": {
+                            "next": "Berikutnya"
+                        }
+                    },
+                    "form_object": {
+                        "title": "Tentang",
+                        "subtitle": "Lengkapi detail",
+                        "display": {
+                            "object": "Detail Kendaraan",
+                            "usage": "Penggunaan"
+                        },
+                        "color": {
+                            "label": "Warna Kendaraan",
+                            "placeholder": "Pilih"
+                        },
+                        "license_plate": {
+                            "label": "No. Polisi",
+                            "placeholder": "XXXX-XXX"
+                        },
+                        "machine_id": {
+                            "label": "No. Mesin",
+                            "placeholder": "No. Mesin"
+                        },
+                        "body_id": {
+                            "label": "No. Rangka",
+                            "placeholder": "No. Rangka"
+                        },
+                        "actions": {
+                            "prev": "Sebelumnya",
+                            "next": "Berikutnya"
+                        }
+                    },
+                    "form_condition": {
+                        "title": "Kondisi",
+                        "subtitle": "Lengkapi data kondisi",
+                        "machine": {
+                            "label": "Mesin",
+                            "placeholder": "Pilih"
+                        },
+                        "interior": {
+                            "label": "Interion",
+                            "placeholder": "Pilih"
+                        },
+                        "exterior": {
+                            "label": "Eksterior",
+                            "placeholder": "Pilih"
+                        },
+                        "odometer": {
+                            "label": "Odometer",
+                            "placeholder": "Odomoter"
+                        },
+                        "description": {
+                            "label": "Keterangan",
+                            "placeholder": "Keterangan"
+                        },
+                        "actions": {
+                            "prev": "Sebelumnya",
+                            "next": "Berikutnya",
+                            "save": "Simpan"
+                        }
+                    }
+                }
+            }
+        }  
+    },
+    "notification": {
+        "title": "Notifikasi",
+        "actions": {
+            "retry": "Coba Lagi"
+        }
+    },
+    "claim": {
+        "index": {
+            "title": "Klaim Saya",
+            "subtitle": "Layanan bantuan pengajuan Klaim GantiRugi",
+            "actions": {
+                "new": "Buat Klaim Baru"
+            },
+            "input": {
+                "search": "Cari Berkas Klaim"
+            },
+            "menu": {
+                "history": "Lihat Klaim Saya",
+                "deletedHistory": "Lihat Klaim Dihapus",
+                "bantuan" : {
+                    "title": "Layanan Bantuan",
+                    "actions": {
+                        "emergency": "Layanan Darurat",
+                        "cs": "Hubungi GantiRugi",
+                        "workshop": "Daftar Bengkel Rekanan"
+                    }
+                }
+            },
+            "stats":{
+                "total": "Total Laporan",
+                "done": "Selesai" 
+            }
+        },
+        "create": {
+            "title": "Klaim baru",
+            "actions": {
+                "save": "Simpan",
+                "submit": "Lapor"
+            },
+            "input": {
+                "underwriting_id": {
+                    "label": "Berkas Polis"
+                },
+                "occured_at": {
+                    "label": "Waktu Kejadian",
+                    "placeholder": "Y-m-d"
+                },
+                "location": {
+                    "label": "Lokasi Kejadian",
+                    "placeholder": "Bundaran HI"
+                },
+                "detail": {
+                    "label": "Deskripsi Kejadian",
+                    "placeholder": "Tabrakan"
+                }
+            }
+        },
+        "deleted": {
+            "title": "Klaim dihapus",
+            "input": {
+                "search": {
+                    "placeholder": "Cari Berkas Klaim"
+                }
+            },
+            "actions": {
+                "retry": "Coba Lagi"
+            }  
+        },
+        "workshop": {
+            "title": "Daftar Bengkel Rekanan",
+            "input": {
+                "search": {
+                    "placeholder": "Cari Bengkel"
+                }
+            },
+            "actions": {
+                "retry": "Coba Lagi"
+            }              
+        }
+    },
+    "profile": {
+        "index": {
+            "display": {
+                "username": "Email",
+                "phone": "Nomor Telepon" , 
+                "emailWallet": "Email otorisasi"
+            },
+            "menu": {
+                "account": {
+                    "title": "Ganti Profile"
+                },
+                "wallet": {
+                    "title": "Rekening",
+                    "stats": {
+                        "balance": "Saldo",
+                        "onhold": "Pending"
+                    },
+                    "actions": {
+                        "history": "Riwayat Transaksi",
+                        "topup": "Top Up",
+                        "withdraw": "Withdraw"
+                    }
+                },
+                "membership": {
+                    "title": "Keanggotaan",
+                    "stats": {
+                        "simpanan_wajib": "Simpanan Wajib",
+                        "simpanan_sukarela": "Simpanan Sukarela"
+                    },
+                    "actions": {
+                        "detail": "Keanggotaan Saya"
+                    }
+                },                
+                "referral": {
+                    "title": "Komunitas",
+                    "stats": {
+                        "joined": "Orang Tergabung",
+                        "notjoin": "Belum Bergabung"
+                    },
+                    "actions": {
+                        "all" : "Komunitas Saya",
+                        "invite" : "Ajak Teman Bergabung"
+                    },
+                    "all": {
+                        "title": "Komunitas saya",
+                        "input": {
+                            "search": {
+                                "placeholder": "Cari Referral"
+                            }
+                        },
+                        "actions": {
+                            "retry": "Coba Lagi"
+                        }            
+                    }
+                },
+                "about": {
+                    "title" : "Tentang",
+                    "actions": {
+                        "about": "Tentang Gantirugi",
+                        "privacy": "Kebijakan Privasi",
+                        "tos": "Syarat dan Ketentuan"
+                    }
+                },
+                "logout": {
+                    "title" : "Logout Akun Saya",
+                    "actions":{
+                        "confirmation": "Anda akan mengakhiri sesi Anda"
+                    }
+                }
+            }
+        },
+        "edit": {
+            "title": "Edit Profile",
+            "email": "Informasi Email Anda",
+            "phone": "Informasi Nomor Telepon Anda",
+            "input": {
+                "username": {
+                    "label": "Email Baru Anda",
+                    "labelold": "Email Lama Anda",
+                    "placeholder": "Masukkan Email Baru Anda"
+                },
+                "phone": {
+                    "label": "Nomor Telepon Baru Anda",
+                    "labelold": "Nomor Telepon Lama Anda",
+                    "placeholder": "Masukkan Nomor Telepon Baru Anda"
+                },
+                "code": {
+                    "title": "Masukkan kode yang dikirimkan ke email Anda",
+                    "confirm": "Anda akan merubah informasi akun Anda dari "
+                }
+            },
+            "actions": {
+                "submit": "Ubah & Simpan"
+            },
+            "alert": {
+                "success": "Informasi berhasil diperbarui"
+            }
+        },
+        "membership": {
+            "index": {
+                "title": "Keanggotaan",
+                "actions": {
+                    "retry": "Coba Lagi"
+                },
+                "nomember": "Anda belum memiliki keanggotaan"
+            }
+        }
+    },
+    "dashboard": {
+        "menu": {
+            "wallet": {
+                "title": "Saldo"
+            },
+            "membership": {
+                "title": "Keanggotaan",
+                "actions": {
+                    "detail": "Keanggotaan Saya"
+                },
+                "empty": "Anda belum memiliki keanggotaan"
+            },
+            "bill": {
+                "title": "Premi yang Akan Datang",
+                "actions": {
+                    "all": "Lihat Semua Polis"
+                }
+            },
+            "product": {
+                "title": "Status Permohonan",
+                "actions": {
+                    "detail": "Lihat Detail",
+                    "new": "Buat Baru"
+                }
+            },
+            "polis": {
+                "title": "Polis",
+                "sub": {
+                    "me": "Polis Saya",
+                    "friend": "Polis Teman"
+                },
+                "actions": {
+                    "all": "Lihat Semua Polis",
+                    "detail": "Lihat Detail"
+                }
+            },
+            "claim": {
+                "title": "Status Klaim",
+                "actions": {
+                    "new": "Buat Klaim Baru",
+                    "detail": "Lihat Detail"
+                },
+                "empty": "Belum ada Klaim",
+                "stats": {
+                    "total": "Total Laporan",
+                    "ongoing": "On Going",
+                    "closed": "Selesai"
+                }
+            },
+            "referral" : {
+                "title": "Komunitas",
+                "stats": {
+                    "joined": "Orang Tergabung",
+                    "notjoin": "Belum Bergabung"
+                },
+                "actions":{
+                    "invite" : "Ajak Teman Bergabung"
+                }
+            }
+        },
+        "actions": {
+            "detail": "Lihat Detail"
+        }
+    },
+    "wallet": {
+        "index": {
+            "title": "Riwayat Transaksi",
+            "input": {
+                "search": {
+                    "placeholder": "Cari Transaksi"
+                }
+            },
+            "actions": {
+                "retry": "Coba Lagi"
+            }
+        },
+        "topup": {
+            "title": "Topup Wallet",
+            "input": {
+                "amount" : {
+                    "label": "Nominal topup",
+                    "placeholder": "Rp 50.000"
+                }
+            },
+            "actions": {
+                "submit": "Request"
+            },
+            "alert": {
+                "success": "Permohonan TopUp Berhasil Diajukan"
+            }
+        },
+        "withdraw": {
+            "title": "Withdraw Wallet",
+            "input": {
+                "bank" : {
+                    "label": "Nama Bank",
+                    "placeholder": "Pilih Bank"
+                },
+                "branch" : {
+                    "label": "Cabang",
+                    "placeholder": "KCP Sedayu"
+                },
+                "account_no" : {
+                    "label": "Nomor rekening",
+                    "placeholder": "011-xxx-xxx"
+                },
+                "account_name" : {
+                    "label": "Atas nama rekening",
+                    "placeholder": "Joni Sutiyoso"
+                },
+                "amount" : {
+                    "label": "Nominal withdraw",
+                    "placeholder": "Rp 50.000"
+                },
+                "verification_code" : {
+                    "label": "Kode Verifikasi",
+                    "placeholder": "xxxx"
+                }
+            },
+            "actions": {
+                "submit": "Request",
+                "verify": "Verify"
+            },
+            "alert": {
+                "success": "Permohonan Withdraw Berhasil Diajukan",
+                "verified": "Permohonan Withdraw Berhasil Diverifikasi"
+            }
+        }
+    },
+    "referral": {
+        "invite": {
+            "title": "Ajak Teman Bergabung",
+            "unavailable": "Fitur hanya dapat dipakai oleh anggota",
+            "share": {
+                "description": "Anda dapat menambahkan anggota komunitas dengan membagikan tautan berikut. Setiap teman yang mendaftar melalui tautan tersebut akan otomatis menjadi anggota dari komunitas Anda",
+                "actions": {
+                    "submit": "Bagikan Undangan"
+                }
+            },
+            "activator": {
+                "description": "Anda dapat menambahkan anggota komunitas dengan mengirimkan undangan melalui email",
+                "product": "Produk Gantirugi"
+            },
+            "invitation": {
+                "description": "Anda dapat menambahkan anggota komunitas Anda dengan membelikan mereka produk perlindungan Gantirugi berikut",
+                "actions": {
+                    "submit": "Kirim Undangan"
+                }
+            },
+            "input": {
+                "email" : {
+                    "label": "Email Teman",
+                    "placeholder": "user@gmail.com"
+                },
+                "utm_content" : {
+                    "label": "Undang melalui pemasar",
+                    "placeholder": "pilih salah satu"
+                },
+                "utm_term" : {
+                    "label": "Undang sebagai",
+                    "placeholder": "pilih salah satu"
+                }
+            }
+        },
+        "withdraw": {
+            "title": "Withdraw Wallet",
+            "input": {
+                "bank" : {
+                    "label": "Nama Bank",
+                    "placeholder": "Pilih Bank"
+                },
+                "branch" : {
+                    "label": "Cabang",
+                    "placeholder": "KCP Sedayu"
+                },
+                "account_no" : {
+                    "label": "Nomor rekening",
+                    "placeholder": "011-xxx-xxx"
+                },
+                "account_name" : {
+                    "label": "Atas nama rekening",
+                    "placeholder": "Joni Sutiyoso"
+                },
+                "amount" : {
+                    "label": "Nominal withdraw",
+                    "placeholder": "Rp 50.000"
+                },
+                "verification_code" : {
+                    "label": "Kode Verifikasi",
+                    "placeholder": "xxxx"
+                }
+            },
+            "actions": {
+                "submit": "Request",
+                "verify": "Verify"
+            }
+        }
+    },
+    "account": {
+        "phone": {
+            "title": "Nomor Telepon",
+            "input": {
+                "username" : {
+                    "label": "Nomor Telepon",
+                    "placeholder": "081234567890"
+                },
+                "verification_code" : {
+                    "label": "Kode Verifikasi",
+                    "placeholder": "xxxx"
+                }
+            },
+            "actions": {
+                "submit": "Request",
+                "verify": "Verify",
+                "resend": "Kirim Ulang"
+            },
+            "alert": [
+                "Anda memiliki permintaan perubahan nomor telepon menjadi",
+                "Harap mengisi kode verifikasi yang dikirimkan ke email ",
+                "Tidak menerima email ?"
+            ]
+        },
+        "emailwallet": {
+            "title": "Email Otorisasi",
+            "input": {
+                "username" : {
+                    "label": "Email",
+                    "placeholder": "user@gantirugi.com"
+                },
+                "verification_code" : {
+                    "label": "Kode Verifikasi",
+                    "placeholder": "xxxx"
+                }
+            },
+            "actions": {
+                "submit": "Request",
+                "verify": "Verify",
+                "resend": "Kirim Ulang"
+            },
+            "alert": [
+                "Anda memiliki permintaan perubahan email otorisasi menjadi ","Anda memiliki permintaan perubahan nomor telepon menjadi",
+                "Harap mengisi kode verifikasi yang dikirimkan ke email ",
+                "Tidak menerima email ?"
+            ]
+        }
+    },
+    "privacy": {
+        "title" : "Kebijakan Privasi"
+    },
+    "about": {
+        "title" : "Tentang Gantirugi"
+    },
+    "tos": {
+        "title" : "Syarat dan Ketentuan"
+    }
+}
+
+
+
+
+

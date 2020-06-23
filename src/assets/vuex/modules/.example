@@ -1,0 +1,41 @@
+import axios from 'axios'
+import apiJson from '../../json/api.json'
+
+const uac = {
+  namespaced: true,
+  state () {
+    return {
+      profile: {}
+    }
+  },
+  getters: {
+    isAuthed: state => {
+      return !!state.token
+    },
+  },
+  mutations: {
+    setProfile: (state, payload) => {
+      state.profile = payload.profile
+    },   
+  },
+  actions: {
+    login ({ commit }, payload) {
+      return new Promise((resolve, reject) => {
+        axios.post(apiJson.API + apiJson.endpoint.login, {
+          username: payload.username,
+          scope: '*'
+        }).then(resp => {
+          // validate data
+          commit('login', {
+            token: resp.data
+          })
+          resolve(resp)
+        }).catch(err => {
+          reject(err)
+        })
+      })
+    }
+  }
+}
+
+export default uac

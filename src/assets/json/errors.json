@@ -1,0 +1,30 @@
+{
+    "axios" : {
+        "response" : {
+           "default": "Permintaan tidak dapat diterima",
+           "400": {
+            "default": "Akun Anda tidak valid.",
+            "invalid_grant": "Autentikasi gagal"
+           },
+           "422": {
+            "default": "Data yang Anda masukkan salah atau tidak lengkap. Harap periksa lagi inputan Anda"
+           },
+           "451": {
+            "default": "Permintaan Anda ditolak"
+           }           
+        },
+        "request": {
+           "default": "Tidak dapat terhubung dengan server"
+        },
+        "policy": {
+            "default": "Maaf kami tidak dapat memproses permintaan Anda"
+        },
+        "unknown": {
+            "default": "Maaf saat ini sistem kami sedang mengalami kendala, silahkan hubungi CS kami"
+        }        
+    },
+    "general": {
+        "fetcherror": "Tidak dapat mendapatkan data",
+        "fetchnodata": "Tidak ada data"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "appversion": "2.0.0",
+    "ttl": 300000,
+    "perPage": 15,
+    "dictionary": {
+    },
+    "apilanguage": {
+       
+    },
+    "menus": {
+       
+    },
+    "images": {
+        "logo" : "static/logo.png",
+        "error" : "static/error.png",
+        "empty" : "static/empty.png",
+        "profile": "static/profile.png",
+        "applogo": "static/applogo.png",
+    },
+    "fonticon": {
+
+    },
+    "color": {
+ 
+    },
+    "filters": {
+
+    }
+}

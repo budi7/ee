@@ -1,0 +1,28 @@
+{
+  "android": {
+    "release": {
+        "keystore": "thunderlab.keystore",
+        "storePassword": "12341234",
+        "alias": "thunderlab",
+        "password": "12341234",
+        "keystoreType": ""
+    }
+},
+  "ios": {
+    "release": {
+      "buildFlag": [
+        "-UseModernBuildSystem=0"
+      ]
+    },
+    "development": {
+      "buildFlag": [
+        "-UseModernBuildSystem=0"
+      ]
+    },
+    "debug": {
+      "buildFlag": [
+        "-UseModernBuildSystem=0"
+      ]
+    }
+  }
+}
