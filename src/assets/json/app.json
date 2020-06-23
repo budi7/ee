@@ -15,7 +15,7 @@
         "error" : "static/error.png",
         "empty" : "static/empty.png",
         "profile": "static/profile.png",
-        "applogo": "static/applogo.png",
+        "applogo": "static/applogo.png"
     },
     "fonticon": {
 

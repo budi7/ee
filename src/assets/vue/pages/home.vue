@@ -70,14 +70,14 @@
         id="tab-2"
         :class="(activeTab === 'product' ? 'tab-active ' : '') + 'page-content tab'"
       >
-        <page-product ref="product" />
+        <!-- <page-product ref="product" /> -->
       </div>
       <!-- Polis tab -->
       <div
         id="tab-3"
         :class="(activeTab === 'polis' ? 'tab-active ' : '') + 'page-content tab'"
       >
-        <page-polis ref="polis" />
+        <!-- <page-polis ref="polis" /> -->
       </div>
       <!-- claim tab -->
       <div
@@ -85,7 +85,7 @@
         class="page-content tab"
         :class="(activeTab === 'claim' ? 'tab-active ' : '') + 'page-content tab'"
       >
-        <page-claim ref="claim" />
+        <!-- <page-claim ref="claim" /> -->
       </div>
       <!-- Account tab -->
       <div
@@ -93,7 +93,7 @@
         class="page-content tab"
         :class="(activeTab === 'profile' ? 'tab-active ' : '') + 'page-content tab'"
       >
-        <page-profile ref="profile" />
+        <!-- <page-profile ref="profile" /> -->
       </div>                   
     </div>      
 
@@ -158,11 +158,11 @@
 </template>
 
 <script>
-import pageHome from '../components/pageHome.vue'
-import pagePolis from '../components/pagePolis.vue'
-import pageProduct from '../components/pageProduct.vue'
-import pageClaim from '../components/pageClaim.vue'
-import pageProfile from '../components/pageProfile.vue'
+// import pageHome from '../components/pageHome.vue'
+// import pagePolis from '../components/pagePolis.vue'
+// import pageProduct from '../components/pageProduct.vue'
+// import pageClaim from '../components/pageClaim.vue'
+// import pageProfile from '../components/pageProfile.vue'
 import appLabel from '../../json/labels.json'
 import appJson from '../../json/app.json'
 import menuGenerator from '../../modules/menuGenerator'
@@ -170,11 +170,11 @@ import debounce from '../../modules/debouncer'
 
 export default {
   components: {
-    pageHome,
-    pagePolis,
-    pageProduct,
-    pageClaim,
-    pageProfile,
+    // pageHome,
+    // pagePolis,
+    // pageProduct,
+    // pageClaim,
+    // pageProfile,
   },
   data() {
     return {

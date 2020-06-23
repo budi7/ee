@@ -7,16 +7,16 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.template"
-    },
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "com.template"
     },
-    "cordova-plugin-x-socialsharing": {
+    "cordova-plugin-file": {
       "PACKAGE_NAME": "com.template"
     },
-    "cordova-plugin-file": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.template"
+    },
+    "cordova-plugin-x-socialsharing": {
       "PACKAGE_NAME": "com.template"
     },
     "polarcape-cordova-plugin-document-handler": {
