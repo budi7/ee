@@ -1,20 +1,12 @@
 <template>
-  <f7-page
-    no-toolbar
-    no-swipeback
-    login-screen
-  >
-    <f7-login-screen-title>
-      <div>
-        <img 
-          :src="appJson.images.applogo"
-          class=""
-          width="80"
-        >
-      </div>
-      <div class="preloader color-red" />
-    </f7-login-screen-title>
-  </f7-page>
+  <div class="wrapp">
+    <div class="box fade-in">
+      <img 
+        :src="appJson.images.applogo"
+        class="logo"
+      >
+    </div>
+  </div>
 </template>
 
 <script>
@@ -29,12 +21,11 @@ export default {
   mounted() {
     setTimeout(() => {
       this.navigateHome()
-    }, 2000)
+    }, 1500)
   },
   methods: {
     navigateHome () {
-      console.log('LOADER')
-      this.$f7router.navigate('/home')
+      this.$f7router.navigate('/')
     }
   }
 }
@@ -45,7 +36,7 @@ export default {
   .box {
     .logo {
       margin-top: -1.75rem;
-      width: 8.75rem !important;
+      width: 8rem !important;
     }
     .tagline {
       margin-top: -1.5rem;

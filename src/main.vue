@@ -6,7 +6,7 @@
             <f7-view url="/panel-left/" links-view=".view-main" />
         </f7-panel> -->
     <f7-view
-      url="/loader"
+      url="/splash"
       :main="true"
       class="ios-edges"
       :stack-pages="true"

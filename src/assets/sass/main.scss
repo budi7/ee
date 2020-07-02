@@ -88,6 +88,11 @@ input {
 	margin: 16px 0;
 }
 
+.content-center {
+	margin-left:auto !important; 
+	margin-right:auto !important;
+}
+
 #select-contact {
 	position: relative;
 	
@@ -188,9 +193,9 @@ input {
 // custom 
 
 // colors from framework7 color theme
-$colorPrimary: rgb(0, 164, 222);
-$colorPrimaryDarken:  #0294c9;
-$colorPrimaryLighten:  #24aee0;
+$colorPrimary: rgb(190, 55, 60);
+$colorPrimaryDarken:  #9a2c32;
+$colorPrimaryLighten:  #c44c54;
 
 $colorAccent:	var(--f7-color-yellow);
 $colorAccentDarken:  var(--f7-color-yellow-shade);
@@ -231,15 +236,22 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center !important;
 }
 
+.text-primary{
+	color: $colorPrimary;
+}
+.text-white{
+	color: white;
+}
+
 // component
 .navbar {
 	.navbar-bg  {
-		background-color: $colorPrimary !important;
+		background-color: $colorWhite !important;
 	}
 	.title {
 		font-family: Inter !important;
 		font-weight: 600 !important;
-		color: $colorWhite;
+		color: $colorPrimary;
 	}
 	a {
 		color: $colorWhite !important;

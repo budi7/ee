@@ -1,4 +1,5 @@
-import Home from './assets/vue/pages/home.vue'
+import Home from './assets/vue/pages/dashboard/index.vue'
+import Splash from './assets/vue/pages/splash.vue'
 import Loader from './assets/vue/pages/loader.vue'
 
 import Welcome from './assets/vue/pages/welcome.vue'
@@ -21,11 +22,16 @@ export default [
     ]
   },
   {
+    path: '/splash',
+    component: Splash,
+  },
+  {
     path: '/loader',
     component: Loader,
-  }, 
+  },
   {
-    path: '/about/',
-    component: AboutPage
-  }
+    path: '/home',
+    component: Home,
+  },
+  
 ]

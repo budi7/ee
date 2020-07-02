@@ -210,12 +210,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/es6-promise-plugin/www/promise.js",
-        "id": "es6-promise-plugin.Promise",
-        "pluginId": "es6-promise-plugin",
-        "runs": true
-    },
-    {
         "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
         "id": "cordova-plugin-x-socialsharing.SocialSharing",
         "pluginId": "cordova-plugin-x-socialsharing",
@@ -230,6 +224,12 @@ module.exports = [
         "clobbers": [
             "DocumentHandler"
         ]
+    },
+    {
+        "file": "plugins/es6-promise-plugin/www/promise.js",
+        "id": "es6-promise-plugin.Promise",
+        "pluginId": "es6-promise-plugin",
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -238,9 +238,9 @@ module.exports.metadata =
     "cordova-plugin-camera": "4.1.0",
     "cordova-plugin-file": "6.0.2",
     "cordova-plugin-whitelist": "1.3.4",
-    "es6-promise-plugin": "4.2.2",
     "cordova-plugin-x-socialsharing": "5.6.8",
-    "polarcape-cordova-plugin-document-handler": "1.1.1"
+    "polarcape-cordova-plugin-document-handler": "1.1.1",
+    "es6-promise-plugin": "4.2.2"
 }
 // BOTTOM OF METADATA
 });
