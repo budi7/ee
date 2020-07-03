@@ -34,7 +34,17 @@ export default {
   methods: {
     navigateHome () {
       console.log('LOADER')
-      this.$f7router.navigate('/home')
+      // this.$f7router.navigate('/home') // home ga punya child path materi dkk
+
+      // debug, nanti di remove kalo uda pasang auth
+      this.$store.commit('uac/login', {
+        token: 123
+      }) 
+
+      this.$f7router.navigate('/', {
+        ignoreCache  : true,
+        reloadCurrent : true
+      })
     }
   }
 }
