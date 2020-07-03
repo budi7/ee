@@ -27,7 +27,7 @@
             class="item-link item-content"
           >
             <div class="item-media">
-              <i class="icon f7-icons small text-color-red" />
+              <i class="icon f7-icons small text-primary">lock_fill</i>
             </div>
             <div class="item-inner">
               <div class="item-title">Change Password</div>
@@ -40,7 +40,7 @@
             class="item-link item-content"
           >
             <div class="item-media">
-              <i class="icon f7-icons small text-color-red">power</i>
+              <i class="icon f7-icons small text-primary">power</i>
             </div>
             <div class="item-inner">
               <div class="item-title">Log out</div>
