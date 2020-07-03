@@ -1,5 +1,9 @@
 <template>
-  <div>
+  <f7-page>
+    <f7-navbar 
+      :title="'Detail Order'"
+      :back-link="'/'"
+    />
     <f7-list media-list>
       <f7-list-item
         v-for="(i,key) in 10"
@@ -11,7 +15,7 @@
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus."
       />
     </f7-list>
-  </div>
+  </f7-page>
 </template>
 
 <script>

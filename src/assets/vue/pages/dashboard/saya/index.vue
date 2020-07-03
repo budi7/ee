@@ -27,7 +27,7 @@
             class="item-link item-content"
           >
             <div class="item-media">
-              <i class="icon f7-icons small text-color-red"></i>
+              <i class="icon f7-icons small text-color-red" />
             </div>
             <div class="item-inner">
               <div class="item-title">Change Password</div>
