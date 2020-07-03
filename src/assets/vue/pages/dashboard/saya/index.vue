@@ -69,14 +69,7 @@ export default {
   },
   methods: {
     init() {
-      console.log('init')
     }
   }
 }
 </script>
-
-<style>
-  .banner {
-    height: 17vh;
-  }
-</style>
