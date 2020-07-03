@@ -12,10 +12,13 @@
       >
         <f7-card>
           <f7-card-content :padding="false">
-            <img src="https://cdn.framework7.io/placeholder/nature-1000x700-8.jpg" width="100%"/>
+            <img
+              src="https://cdn.framework7.io/placeholder/nature-1000x700-8.jpg"
+              width="100%"
+            >
           </f7-card-content>
           <f7-card-footer>
-            <f7-link>Image {{key+1}}</f7-link>
+            <f7-link>Image {{ key+1 }}</f7-link>
           </f7-card-footer>
         </f7-card>
       </f7-col>
