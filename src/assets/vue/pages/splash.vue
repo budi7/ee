@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     navigateHome () {
-      this.$f7router.navigate('/')
+      this.$f7router.back('/')
     }
   }
 }

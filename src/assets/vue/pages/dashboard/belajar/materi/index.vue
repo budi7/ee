@@ -1,7 +1,7 @@
 <template>
   <f7-page>
     <f7-navbar 
-      :title="'Detail Order'"
+      :title="'Materi'"
       :back-link="'/'"
     />
     <f7-list media-list>
@@ -13,6 +13,7 @@
         title="Some title"
         after="17:14"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus."
+        @click.native="$f7router.navigate('/materi/' + i)"
       />
     </f7-list>
   </f7-page>
@@ -24,9 +25,12 @@
 export default {
   data() {
     return {
+      title : null
     }
   },
   computed: {
+  },
+  created() {
   },
   mounted() {
     this.init()

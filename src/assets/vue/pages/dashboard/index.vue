@@ -175,6 +175,8 @@ export default {
   },
   watch: {
     activeTab (val) {
+      // console.log('ROUTER HISTORY',this.$f7router.history)
+      // console.log('ROUTE',this.$f7route)
       console.log('check val', val)
       this.$refs[val].init()
     }

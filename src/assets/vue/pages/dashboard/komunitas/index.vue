@@ -2,7 +2,7 @@
   <div class="m-3">
     <f7-row class="content-center">
       <f7-col>
-        <f7-card>
+        <f7-card @click.native="$f7router.navigate('/cerita')">
           <f7-card-content>
             <p class="text-primary">
               <strong>Cerita</strong>
@@ -14,7 +14,7 @@
     </f7-row>
     <f7-row class="content-center">
       <f7-col>
-        <f7-card>
+        <f7-card @click.native="$f7router.navigate('/event')">
           <f7-card-content>
             <p class="text-primary">
               <strong>Event</strong>
@@ -26,7 +26,7 @@
     </f7-row>
     <f7-row class="content-center">
       <f7-col>
-        <f7-card>
+        <f7-card @click.native="$f7router.navigate('/galeri')">
           <f7-card-content>
             <p class="text-primary">
               <strong>Galeri</strong>
@@ -38,7 +38,7 @@
     </f7-row>
     <f7-row class="content-center">
       <f7-col>
-        <f7-card>
+        <f7-card @click.native="$f7router.navigate('/tentang')">
           <f7-card-content>
             <p class="text-primary">
               <strong>Tentang</strong>

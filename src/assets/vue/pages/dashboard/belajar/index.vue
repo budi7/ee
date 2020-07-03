@@ -2,7 +2,7 @@
   <div class="m-3">
     <f7-row class="content-center">
       <f7-col>
-        <f7-card @click.native="navigate('materi')">
+        <f7-card @click.native="$f7router.navigate('/materi')">
           <f7-card-content>
             <p class="text-primary">
               <strong>Materi</strong>
@@ -14,7 +14,7 @@
     </f7-row>
     <f7-row class="content-center">
       <f7-col>
-        <f7-card @click="navigate('materi')">
+        <f7-card @click.native="$f7router.navigate('/pertanyaan')">
           <f7-card-content>
             <p class="text-primary">
               <strong>Pertanyaan</strong>
@@ -26,7 +26,7 @@
     </f7-row>
     <f7-row class="content-center">
       <f7-col>
-        <f7-card @click="navigate('materi')">
+        <f7-card @click.native="$f7router.navigate('/resource')">
           <f7-card-content>
             <p class="text-primary">
               <strong>Resource</strong>
@@ -55,10 +55,6 @@ export default {
   methods: {
     init() {
       console.log('init')
-    },
-    navigate(path) {
-      this.$f7router.navigate('/materi')
-      console.log('PATH',path)
     }
   }
 }
