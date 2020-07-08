@@ -36,8 +36,24 @@ export default {
   },
   mounted() {
     // console.log(this)
-    console.log('ROUTES',routes)
+    // console.log('ROUTES',routes)
+    document.addEventListener('deviceready', this.onDeviceReady, false)
     this.$errorHandler.init(dictionary)
+  },
+  methods: {
+    onDeviceReady() {
+      console.log('ready')
+      document.addEventListener('backbutton', this.onBackKeyDown, false)
+    },
+    onBackKeyDown(e) {
+      e.preventDefault()
+      if(this.$f7.views.main.router.url === '/'){
+        navigator.app.exitApp()
+      }else{
+        this.$f7.views.main.router.back()
+      }
+      // this.$f7router.back()
+    }
   }
 }
 </script>

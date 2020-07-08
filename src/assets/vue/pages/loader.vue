@@ -23,11 +23,14 @@ import appJson from '../../json/app.json'
 export default {
   data() {
     return {
-      appJson
+      appJson,
+      auth: false
     }
   },
   mounted() {
     setTimeout(() => {
+      this.auth = this.$store.getters['uac/isAuthed']
+      console.log('AAUTH',this.auth)
       this.navigateHome()
     }, 2000)
   },

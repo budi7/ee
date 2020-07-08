@@ -30,6 +30,7 @@ export default [
   {
     path: '/',
     async(to, from, resolve) {
+      console.log('store.state.uac.token',store.state.uac)
       if (store.state.uac.token) {
         resolve({ component: Home })
       } else {

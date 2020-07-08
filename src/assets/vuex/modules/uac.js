@@ -18,7 +18,7 @@ const uac = {
     },
     getToken: state => {
       if (!state.token) return null
-      return 'Bearer ' + state.token.access_token
+      return 'Bearer ' + state.token
     }    
   },
   mutations: {
@@ -47,17 +47,17 @@ const uac = {
   actions: {
     login ({ commit }, payload) {
       return new Promise((resolve, reject) => {
-        axios.post(apiJson.API + apiJson.endpoint.login, {
+        axios.post(apiJson.API + 'api/v1/user/login', {
           username: payload.username,
           password: payload.password,
-          grant_type: 'password',
-          client_id: apiJson.client_id,
-          client_secret: apiJson.client_secret,
-          scope: '*'
+          // grant_type: 'password',
+          // client_id: apiJson.client_id,
+          // client_secret: apiJson.client_secret,
+          // scope: '*'
         }).then(resp => {
           // validate data
           commit('login', {
-            token: resp.data
+            token: resp.data.token.data
           })
           resolve(resp)
         }).catch(err => {

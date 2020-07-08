@@ -32,16 +32,32 @@
 export default {
   data() {
     return {
+      title : null,
+      content_loading: true,
+      content: null
     }
   },
   computed: {
+  },
+  created() {
   },
   mounted() {
     this.init()
   },
   methods: {
     init() {
-    }
+      this.resetSetting()
+      this.loadContent()
+    },
+    resetSetting(){
+      this.content_loading = true
+      this.content = null
+    },
+    loadContent() {
+      setTimeout(() => {
+        this.content_loading = false
+      }, 2000)
+    },
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <f7-list media-list>
+    <f7-list :class="content_loading ? 'skeleton-text skeleton-effect-fade' : ''" media-list>
       <f7-list-item
         v-for="(i,key) in 10"
         :key="key"
@@ -21,6 +21,8 @@
 export default {
   data() {
     return {
+      content_loading: true,
+      content: null
     }
   },
   computed: {
@@ -30,7 +32,18 @@ export default {
   },
   methods: {
     init() {
-    }
+      this.resetSetting()
+      this.loadContent()
+    },
+    resetSetting(){
+      this.content_loading = true
+      this.content = null
+    },
+    loadContent() {
+      setTimeout(() => {
+        this.content_loading = false
+      }, 2000)
+    },
   }
 }
 </script>

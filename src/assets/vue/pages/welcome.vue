@@ -50,6 +50,7 @@
                 </div>
                 <div class="item-input-wrap">
                   <input
+                    v-model="username"
                     type="text"
                     placeholder="08123123456"
                   >
@@ -64,6 +65,7 @@
                 </div>
                 <div class="item-input-wrap">
                   <input
+                    v-model="password"
                     type="password"
                     placeholder="Your password"
                   >
@@ -89,6 +91,7 @@
 </template>
 
 <script>
+import apiJson from '../../json/api.json'
 import appJson from '../../json/app.json'
 import appLabel from '../../json/labels.json'
 
@@ -97,14 +100,21 @@ export default {
   },
   data() {
     return {
+      apiJson,
       appLabel: appLabel.uac,
-      appJson
+      appJson,
+      loading: false,
+      username: 'chelsy@thunderlab.id',
+      password: 'admin',
     }
   },
   methods: {
     onSubmit () {
+      this.$f7router.navigate('/loader', {
+        ignoreCache  : true,
+        reloadCurrent : true
+      })
       this.$f7.sheet.close()
-      this.$f7router.navigate('/loader')
     }
   }
 }

@@ -8,11 +8,11 @@
         <strong>Renungan Hari ini</strong>
       </h2>
     </div>
-    <f7-card class="demo-card-header-pic">
+    <f7-card :class="first_content_loading ? 'skeleton-text skeleton-effect-fade demo-card-header-pic' : 'demo-card-header-pic'">
       <f7-card-header
         class="no-border"
         valign="bottom"
-        style="background-image:url(https://cdn.framework7.io/placeholder/nature-1000x600-3.jpg); height:8em"
+        :style="first_content_loading ?'' : 'background-image:url(https://cdn.framework7.io/placeholder/nature-1000x600-3.jpg); height:8em'"
       />
       <f7-card-content>
         <p><strong>Lorem ipsum dolor</strong></p>
@@ -43,6 +43,7 @@
         :key="key"
       >
         <f7-card
+          :class="first_content_loading ? 'skeleton-text skeleton-effect-fade' : ''"
           outline
           title="Card header"
           content="Card with header and footer. Card headers are used to display card titles and footers for additional information or just for custom actions."
@@ -60,7 +61,7 @@
     </div>
     
     <f7-card class="mb-3">
-      <f7-card-content>
+      <f7-card-content :class="first_content_loading ? 'skeleton-text skeleton-effect-fade' : ''">
         <f7-list
           accordion-list
         >
@@ -90,6 +91,15 @@
 export default {
   data() {
     return {
+      first_content: null,
+      second_content: null,
+      third_content: null,
+      first_content_loading: true,
+      second_content_loading: true,
+      third_content_loading: true,
+      first_content_error: false,
+      second_content_error: false,
+      third_content_error: false,
     }
   },
   computed: {
@@ -99,6 +109,39 @@ export default {
   },
   methods: {
     init() {
+      this.resetSetting()
+      this.loadData()
+    },
+    resetSetting() {
+      this.first_content = null
+      this.second_content = null
+      this.third_content = null
+      this.first_content_loading = true
+      this.second_content_loading = true
+      this.third_content_loading = true
+      this.first_content_error = false
+      this.second_content_error = false
+      this.third_content_error = false
+    },
+    loadData() {
+      this.load_first_content()
+      this.load_second_content()
+      this.load_third_content()
+    },
+    load_first_content() {
+      setTimeout(() => {
+        this.first_content_loading = false
+      }, 2000)
+    },
+    load_second_content() {
+      setTimeout(() => {
+        this.second_content_loading = false
+      }, 2000)
+    },
+    load_third_content() {
+      setTimeout(() => {
+        this.third_content_loading = false
+      }, 2000)
     }
   }
 }

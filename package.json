@@ -1,6 +1,6 @@
 {
-  "name": "id.thunderlab.ee",
-  "version": "2.0.0",
+  "name": "id.thunderlab.ee4g",
+  "version": "1.0.0",
   "description": "Brand new cordova project with framework7 - vue - webpack!",
   "scripts": {
     "lint": "eslint ./src --ext .js,.vue --fix",

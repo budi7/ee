@@ -182,6 +182,7 @@ export default {
   },
   mounted() {
     // init
+    console.log('token',this.$store.getters['uac/getToken'])
   },
   methods: {
   },

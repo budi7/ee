@@ -11,11 +11,11 @@
        
     },
     "images": {
-        "logo" : "static/logo.png",
+        "logo" : "static/appLogo.png",
         "error" : "static/error.png",
         "empty" : "static/empty.png",
         "profile": "static/profile.png",
-        "applogo": "static/applogo.png"
+        "applogo": "static/appLogo.png"
     },
     "fonticon": {
 
