@@ -4,27 +4,28 @@
       :title="'Detail'"
       :back-link="'/'"
     />
+
     <f7-card :class="content_loading ? 'skeleton-text skeleton-effect-fade' : ''">
       <f7-row class="content-center">
         <f7-col>
-          <f7-card-content>
+          <f7-card-content v-if="content">
             <p class="text-primary">
-              <strong>Title</strong>
+              <strong>
+                {{ content.title }}
+              </strong>
             </p>
-            <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
-          </f7-card-content>
-        </f7-col>
-      </f7-row>
-    </f7-card>
-    <f7-card :class="content_loading ? 'skeleton-text skeleton-effect-fade' : ''">
-      <f7-row class="content-center">
-        <f7-col>
-          <f7-card-content>
-            <p class="text-primary">
-              <strong>Content</strong>
-            </p>
-            <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
-            <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+            <div v-html="content.content" />
+            <div
+              v-for="(link,index) in content.medias"
+              :key="index"
+            >
+              <f7-link
+                :href="link.media_url"
+                external
+              >
+                Source {{ index + 1 }}
+              </f7-link>
+            </div>
           </f7-card-content>
         </f7-col>
       </f7-row>
@@ -33,11 +34,21 @@
 </template>
 
 <script>
-// import transporter from '../../modules/axiosTransporter'
+import transporter from '../../../../../modules/axiosTransporter'
+import apiJson from '../../../../../json/api.json'
 
 export default {
+  props: {
+    id: {
+      type: [String, Number],
+      default: null,
+    }
+  },
   data() {
     return {
+      audio: false,
+      video: true,
+      apiJson,
       title : null,
       content_loading: true,
       content: null
@@ -60,9 +71,24 @@ export default {
       this.content = null
     },
     loadContent() {
+      const vm = this
+      const api = this.apiJson.API + 'api/v1/user/resource/' + vm.id
+
+      vm.content_loading = true
+
+      transporter.get({
+        api: api,
+        token: vm.$store.getters['uac/getToken']
+      }).then((res) => {
+        vm.content = res.data
+        // vm.$set(vm, 'content', res.data)
+        console.log('check res', vm.content)
+      }).catch((err) => {
+        console.error('error', err)
+      })
       setTimeout(() => {
         this.content_loading = false
-      }, 2000)
+      }, 1000)
     },
   }
 }

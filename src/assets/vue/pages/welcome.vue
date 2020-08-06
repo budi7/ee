@@ -10,11 +10,11 @@
         class="logo mb-2"
         width="180"
       >
-      <p class="text-white">
+      <!-- <p class="text-primary">
         Welcome to EE4G
-      </p>
+      </p> -->
       <div class="block-footer">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Come for Christ, Go for Christ</p>
       </div>
       <f7-block 
         class="pb-1"
@@ -41,50 +41,47 @@
     >
       <!-- Scrollable sheet content -->
       <f7-block>
-        <div class="list no-hairlines-md">
-          <ul>
-            <li class="item-content item-input">
-              <div class="item-inner">
-                <div class="item-title item-floating-label">
-                  Username
-                </div>
-                <div class="item-input-wrap">
-                  <input
-                    v-model="username"
-                    type="text"
-                    placeholder="08123123456"
-                  >
-                  <span class="input-clear-button" />
-                </div>
-              </div>
-            </li>
-            <li class="item-content item-input">
-              <div class="item-inner">
-                <div class="item-title item-floating-label">
-                  Password
-                </div>
-                <div class="item-input-wrap">
-                  <input
-                    v-model="password"
-                    type="password"
-                    placeholder="Your password"
-                  >
-                  <span class="input-clear-button" />
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <f7-list form>
+          <f7-list-input
+            :value="username"
+            label="E-mail"
+            type="email"
+            placeholder="Your e-mail"
+            clear-button
+            @input="username = $event.target.value"
+          />
+          <f7-list-input
+            :value="password"
+            label="Password"
+            type="password"
+            placeholder="Your e-mail"
+            clear-button
+            @input="password = $event.target.value"
+          />
+        </f7-list>
         <f7-button
-          class="mb-2"
+          :class="loading ? 'disabled mb-2':'mb-2'"
           style="width:100%"
           fill
           large
           @click="onSubmit"
         >
           <!-- @click="onSubmit(plan)" -->
-          Login
+          <f7-preloader
+            v-if="loading"
+            color="white"
+          />
+          {{ loading ? '' : 'Login' }}
         </f7-button>
+        <div class="mt-3 pt-3 text-center">
+          <f7-link
+            class=""
+            :animate="true"
+            @click="onForget"
+          >
+            Forget Password
+          </f7-link>
+        </div>
       </f7-block>
     </f7-sheet>
   </f7-page>
@@ -104,17 +101,76 @@ export default {
       appLabel: appLabel.uac,
       appJson,
       loading: false,
-      username: 'chelsy@thunderlab.id',
-      password: 'admin',
+      username: '',
+      password: '',
     }
   },
+  mounted() {
+    console.log('cektoken',this.$store.getters['uac/getToken'])
+  },
   methods: {
-    onSubmit () {
-      this.$f7router.navigate('/loader', {
+    onForget() {
+      this.$f7.sheet.close()
+      this.$f7router.navigate('/forget', {
         ignoreCache  : true,
         reloadCurrent : true
       })
-      this.$f7.sheet.close()
+    },
+    onSubmit () {
+      // this.$f7router.navigate('/loader', {
+      //   ignoreCache  : true,
+      //   reloadCurrent : true
+      // })
+      // this.$f7.sheet.close()
+      if (this.loading) return
+      this.loading = true
+      
+      const vm = this
+
+      this.$store.dispatch('uac/login', {
+        username: this.username,
+        password: this.password,
+        device_name: 'android'
+      }).then(res => {
+        if(res.data.status){
+          console.log(res)
+          vm.$alert.show({
+            vm: vm,
+            type: 'success',
+            text: 'Autentikasi Berhasil',
+            autoClose: true
+          })        
+          vm.loading = false
+          this.$f7.sheet.close()
+          vm.$f7router.navigate('/loader', {
+            ignoreCache  : true,
+            reloadCurrent : true
+          })
+        }else{
+          vm.$alert.show({
+            vm: vm,
+            type: 'error',
+            text: 'Pastikan username dan password Anda benar',
+            autoClose: true
+          })
+          vm.loading = false
+        }
+      }).catch(e => {
+        console.log('error',e)
+        const error = vm.$errorHandler.translate(e)
+
+        if (error.code === 400 && error.data && error.data.error === 'invalid_grant' || error.code === 401) {
+          error.text = error.text + '. Pastikan username dan password Anda benar'
+        }
+
+        vm.$alert.show({
+          vm: vm,
+          type: 'error',
+          text: error.text,
+          autoClose: true
+        })
+        vm.loading = false
+      })
     }
   }
 }

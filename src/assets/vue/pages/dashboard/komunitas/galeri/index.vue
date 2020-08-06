@@ -1,40 +1,90 @@
 <template>
   <f7-page>
     <f7-navbar 
-      :title="'Galeri'"
-      :back-link="'/'"
+      :title="'Gallery'"
+      :back-link="''"
     />
-    <f7-row class="content-center m-2">
-      <f7-col 
-        v-for="(i,key) in 10"
-        :key="key"
-        width="50"
-      >
-        <f7-card>
-          <f7-card-content :padding="false">
-            <img
-              src="https://cdn.framework7.io/placeholder/nature-1000x700-8.jpg"
-              width="100%"
-            >
-          </f7-card-content>
-          <f7-card-footer>
-            <f7-link>Image {{ key+1 }}</f7-link>
-          </f7-card-footer>
-        </f7-card>
-      </f7-col>
-    </f7-row>
+    <page-list
+      ref="pageList"
+      :with-navbar="false"
+      :with-searchbar="true"
+      :with-toolbar="false"
+      toolbar-key="status"
+      :list-per-page="appJson.perPage"
+      :error-title="'Gagal terhubung ke server'"
+      :retry-title="'Coba lagi'"
+      :empty-title="'Tidak ada data'"
+      :api="apiJson.API + 'api/v1/user/gallery'"
+      :token="$store.getters['uac/getToken']"
+      class=""
+      @SELECTED="(dt) => { onSelected(dt) }"
+    >
+      <!-- list data  -->
+      <template v-slot:listcard="{data}">
+        <div
+          class="item-media width-100"
+          @click="onSelected(data)"
+        >
+          <div class="item-inner">
+            <div class="item-title-row">
+              {{ data.published_at | toDate }}
+            </div>
+            <div class="item-subtitle">
+              <small>{{ data.title }}</small>
+            </div>
+          </div>
+        </div>
+      </template>
+
+      <!-- list skeleton  -->
+      <template slot="skeleton">
+        <div class="item-media">
+          <div
+            class="skeleton-block icon-block"
+          />
+        </div>
+        <div class="item-inner">
+          <div class="item-title-row">
+            <div class="item-title">
+              Product
+            </div>
+          </div>
+          <div class="item-subtitle">
+            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+          </div>
+          <div class="item-text">
+            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+          </div>
+        </div>
+      </template>
+    </page-list>
+    <f7-photo-browser
+      ref="standalone"
+      :photos="photos"
+      back-link-text="Back"
+    />
   </f7-page>
 </template>
 
 <script>
-// import transporter from '../../modules/axiosTransporter'
+import appJson from '../../../../../json/app.json'
+import apiJson from '../../../../../json/api.json'
+import pageList from '../../../../components/pageList.vue' 
 
 export default {
+  components: {
+    pageList
+  },
   data() {
     return {
+      appJson,
+      apiJson,
       title : null,
-      content_loading: true,
-      content: null
+      photos: [],
+      isMoreData: true,
+      isError: false,
+      q_search: null,
+      q_status: null
     }
   },
   computed: {
@@ -42,22 +92,73 @@ export default {
   created() {
   },
   mounted() {
-    this.init()
+    this.$refs.pageList.init()
   },
   methods: {
-    init() {
-      this.resetSetting()
-      this.loadContent()
+    init(q) {
+      this.q_status = q
+      this.refreshComponent()
     },
-    resetSetting(){
-      this.content_loading = true
-      this.content = null
+    search (q) {
+      this.q_search = q
+      this.refreshComponent()
     },
-    loadContent() {
+    filterStatus (q) {
+      this.q_status = q
+      this.refreshComponent()
+    },
+    filterCategory (q) {
+      console.log(q)
+      this.refreshComponent()
+    },
+    refreshComponent () {
+      this.$refs.pageList.init()
+      // this.$refs.pageList.setCustomQuery({
+      //   status: this.q_status,
+      //   search: this.q_search,
+      // })
+    },
+    navigate() {
+      
+    },
+    onSelected(selected) {
+      let vm = this
+      vm.photos = []
+      selected.medias.forEach(element => {
+        vm.photos.push({
+          url: element.media_url,
+          caption: element.title
+        })
+      })
       setTimeout(() => {
-        this.content_loading = false
-      }, 2000)
-    },
+        console.log('PHOTOS : ',vm.photos)
+        if(vm.photos.length > 0){
+          vm.$refs.standalone.open()
+        }
+      }, 500)
+    }
   }
 }
 </script>
+<style>
+
+.navbar-photo-browser .navbar-inner {
+  background: rgb(190, 55, 60);
+}
+
+.navbar-photo-browser .navbar-inner .title {
+  color: white !important;  
+}
+
+.navbar-photo-browser .navbar-inner .right .link {
+  color: white !important;
+}
+
+.toolbar .toolbar-inner .photo-browser-prev {
+  color: white !important;
+}
+
+.toolbar .toolbar-inner .photo-browser-next {
+  color: white !important;
+}
+</style>

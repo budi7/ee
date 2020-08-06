@@ -40,9 +40,9 @@ export default {
       // this.$f7router.navigate('/home') // home ga punya child path materi dkk
 
       // debug, nanti di remove kalo uda pasang auth
-      this.$store.commit('uac/login', {
-        token: 123
-      }) 
+      // this.$store.commit('uac/login', {
+      //   token: 123
+      // }) 
 
       this.$f7router.navigate('/', {
         ignoreCache  : true,

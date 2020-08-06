@@ -1,12 +1,13 @@
 import axios from 'axios'
 import apiJson from '../../json/api.json'
+import webstorage from '../../bridge/webStorage'
 
 const uac = {
   namespaced: true,
   state () {
     return {
-      token: null,
-      profile: {}
+      token: webstorage.get('token').data ? webstorage.get('token').data : null,
+      profile: webstorage.get('profile').data ? webstorage.get('profile').data : null
     }
   },
   getters: {
@@ -19,7 +20,10 @@ const uac = {
     getToken: state => {
       if (!state.token) return null
       return 'Bearer ' + state.token
-    }    
+    },
+    profile: state => {
+      return state.profile
+    }
   },
   mutations: {
     initStore: state => {
@@ -31,10 +35,16 @@ const uac = {
     },
     login: (state, payload) => {
       state.token = payload.token
+      state.profile = payload
+      webstorage.store('token',JSON.stringify(payload.token))
+      webstorage.store('profile',JSON.stringify(payload.user))
     },
     logout: (state) => {
       state.profile = null
       state.token = null
+      webstorage.store('token',null)
+      webstorage.store('profile',null)
+      // console.log('CEK TOKEN STORAGE',webstorage.get('token'))
     },
     requestForgetPasswordToken: (state, payload) => {
       console.log(payload)
@@ -50,14 +60,17 @@ const uac = {
         axios.post(apiJson.API + 'api/v1/user/login', {
           username: payload.username,
           password: payload.password,
+          device_name: payload.device_name
           // grant_type: 'password',
           // client_id: apiJson.client_id,
           // client_secret: apiJson.client_secret,
           // scope: '*'
         }).then(resp => {
           // validate data
+          console.log('RESP',resp)
           commit('login', {
-            token: resp.data.token.data
+            token: resp.data.data.token,
+            user: resp.data.data.user
           })
           resolve(resp)
         }).catch(err => {

@@ -1,6 +1,6 @@
 {
-  "name": "id.thunderlab.ee4g",
-  "version": "1.0.0",
+  "name": "io.cordova.myapp7ddfbf",
+  "version": "2.0.0",
   "description": "Brand new cordova project with framework7 - vue - webpack!",
   "scripts": {
     "lint": "eslint ./src --ext .js,.vue --fix",
@@ -83,7 +83,7 @@
     "vue": "^2.6.10",
     "vuex": "^3.4.0"
   },
-  "displayName": "GantiRugi",
+  "displayName": "EE4G",
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
